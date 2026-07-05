@@ -1,0 +1,14 @@
+<svg width="260" height="220" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mood compass</title>
+  <desc id="desc">A simple abstract compass made of colorful shapes.</desc>
+  <rect x="22" y="28" width="216" height="164" rx="8" fill="#FFFFFF" stroke="#D9E1DF" stroke-width="2"/>
+  <circle cx="130" cy="110" r="58" fill="#F7F8F3" stroke="#D9E1DF" stroke-width="2"/>
+  <path d="M130 47L145 108L130 173L115 108L130 47Z" fill="#087F7B"/>
+  <path d="M67 110L128 95L193 110L128 125L67 110Z" fill="#D65A45"/>
+  <circle cx="130" cy="110" r="24" fill="#3268A8"/>
+  <circle cx="130" cy="110" r="10" fill="#F2B84B"/>
+  <path d="M64 56H96" stroke="#18201F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M164 164H196" stroke="#18201F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M198 62L210 74" stroke="#C58A19" stroke-width="5" stroke-linecap="round"/>
+  <path d="M50 154L62 166" stroke="#6F62B8" stroke-width="5" stroke-linecap="round"/>
+</svg>

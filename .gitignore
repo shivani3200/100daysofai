@@ -1,0 +1,12 @@
+# Day 1 is already maintained as its own Git repository.
+day1/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Common build and dependency output
+node_modules/
+dist/
+.env
+.env.local
