@@ -1,0 +1,8 @@
+# Local system files
+.DS_Store
+Thumbs.db
+
+# Static project does not need these, but keep accidental installs out of Git.
+node_modules/
+dist/
+.env

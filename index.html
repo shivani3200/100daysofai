@@ -3,12 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=./day2/" />
     <title>100 Days of AI</title>
+    <style>
+      :root {
+        --ink: #18211f;
+        --muted: #5f6965;
+        --paper: #f5f7f4;
+        --line: #dce5df;
+        --green: #0b7a59;
+        --blue: #2f6fbd;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          linear-gradient(135deg, rgba(11, 122, 89, 0.1), transparent 34%),
+          linear-gradient(225deg, rgba(47, 111, 189, 0.12), transparent 30%),
+          var(--paper);
+      }
+
+      main {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 44px 0;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2.4rem, 7vw, 5rem);
+        line-height: 0.95;
+      }
+
+      .lede {
+        max-width: 680px;
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      a {
+        display: grid;
+        gap: 10px;
+        min-height: 180px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 20px;
+        color: inherit;
+        background: rgba(255, 255, 255, 0.94);
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus-visible {
+        border-color: var(--green);
+        outline: none;
+      }
+
+      span {
+        color: var(--green);
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      strong {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      @media (max-width: 720px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p>
-      Opening <a href="./day2/">Day 2 - MoodQuote AI</a>.
-    </p>
+    <main>
+      <h1>100 Days of AI</h1>
+      <p class="lede">
+        Small AI learning projects built in public, one concept at a time.
+      </p>
+
+      <section class="project-grid" aria-label="Project list">
+        <a href="./day3/">
+          <span>Day 3</span>
+          <strong>NextWord AI</strong>
+          <p>Learn prediction using tokens, scores, and probabilities.</p>
+        </a>
+        <a href="./day2/">
+          <span>Day 2</span>
+          <strong>MoodQuote AI</strong>
+          <p>Generate quotes from a rule-based mood detection engine.</p>
+        </a>
+      </section>
+    </main>
   </body>
 </html>

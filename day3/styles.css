@@ -1,0 +1,381 @@
+:root {
+  --ink: #18211f;
+  --muted: #5f6965;
+  --paper: #f5f7f4;
+  --panel: #ffffff;
+  --line: #dce5df;
+  --green: #0b7a59;
+  --green-dark: #07563f;
+  --blue: #2f6fbd;
+  --red: #c94f3b;
+  --gold: #d29a23;
+  --shadow: 0 18px 44px rgba(24, 33, 31, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background:
+    linear-gradient(135deg, rgba(11, 122, 89, 0.1), transparent 34%),
+    linear-gradient(225deg, rgba(47, 111, 189, 0.12), transparent 30%),
+    var(--paper);
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  align-items: center;
+  gap: 22px;
+  min-height: 270px;
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2.65rem, 7vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+
+.lede {
+  max-width: 660px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.pipeline-card {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.pipeline-card span {
+  display: block;
+  border-left: 5px solid var(--green);
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: #fafffc;
+  font-weight: 850;
+}
+
+.pipeline-card span:nth-child(2) {
+  border-left-color: var(--blue);
+}
+
+.pipeline-card span:nth-child(3) {
+  border-left-color: var(--gold);
+}
+
+.pipeline-card span:nth-child(4) {
+  border-left-color: var(--red);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(290px, 0.85fr) minmax(0, 1.15fr);
+  gap: 18px;
+}
+
+.predictor-panel,
+.result-panel,
+.technical-block,
+.lesson-band {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.predictor-panel,
+.result-panel {
+  min-height: 310px;
+  padding: 22px;
+}
+
+.predictor-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  display: grid;
+  gap: 10px;
+  font-weight: 850;
+}
+
+textarea {
+  width: 100%;
+  min-height: 145px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  color: var(--ink);
+  background: #fbfdfc;
+  line-height: 1.55;
+}
+
+textarea:focus {
+  border-color: var(--green);
+  outline: 3px solid rgba(11, 122, 89, 0.15);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 44px;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: 850;
+}
+
+.primary-button {
+  border: 1px solid var(--green);
+  color: #ffffff;
+  background: var(--green);
+}
+
+.primary-button:hover,
+.primary-button:focus-visible {
+  background: var(--green-dark);
+  outline: none;
+}
+
+.secondary-button {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: #ffffff;
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+  border-color: var(--blue);
+  outline: none;
+}
+
+.result-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.confidence-badge {
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: #ffffff;
+  background: var(--green);
+  font-size: 0.85rem;
+  font-weight: 850;
+}
+
+.prediction-line {
+  margin: 38px 0 28px;
+  font-size: clamp(1.8rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.prediction-line strong {
+  color: var(--green-dark);
+}
+
+.explanation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: auto;
+}
+
+.explanation-grid article,
+.technical-block {
+  padding: 16px;
+}
+
+.explanation-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdfc;
+}
+
+.explanation-grid span,
+.prediction-row span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.explanation-grid strong {
+  display: block;
+  margin-top: 5px;
+  line-height: 1.45;
+}
+
+.technical-view {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.token-list,
+.score-list,
+.probability-list {
+  display: grid;
+  gap: 10px;
+}
+
+.token {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  border: 1px solid rgba(47, 111, 189, 0.25);
+  border-radius: 999px;
+  padding: 7px 12px;
+  color: var(--blue);
+  background: rgba(47, 111, 189, 0.08);
+  font-weight: 850;
+}
+
+.prediction-row {
+  display: grid;
+  gap: 7px;
+}
+
+.bar {
+  height: 11px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #edf2ef;
+}
+
+.bar-fill {
+  width: var(--width);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+}
+
+.score-list .bar-fill {
+  background: var(--gold);
+}
+
+.lesson-band {
+  margin-top: 18px;
+  padding: 22px;
+}
+
+.lesson-band h2 {
+  margin-top: 8px;
+  font-size: clamp(1.45rem, 3vw, 2.3rem);
+}
+
+.lesson-band p:last-child {
+  max-width: 840px;
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .workspace,
+  .technical-view {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    width: min(100% - 22px, 1120px);
+    padding: 24px 0;
+  }
+
+  .predictor-panel,
+  .result-panel,
+  .technical-block,
+  .lesson-band {
+    padding: 16px;
+  }
+
+  .button-row,
+  .explanation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+}

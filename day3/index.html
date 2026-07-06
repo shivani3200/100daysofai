@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Day 3 frontend-only AI next word predictor demo."
+    />
+    <title>NextWord AI | Day 3</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Day 3 / 100 Days of AI</p>
+          <h1 id="page-title">NextWord AI</h1>
+          <p class="lede">
+            A tiny frontend-only demo that shows how prediction can move from
+            input, to tokens, to scores, to probabilities, to output.
+          </p>
+        </div>
+        <div class="pipeline-card" aria-label="AI prediction pipeline">
+          <span>Input</span>
+          <span>Tokens</span>
+          <span>Scores</span>
+          <span>Probability</span>
+          <span>Output</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Next word predictor">
+        <form class="predictor-panel" id="predictor-form">
+          <label for="sentence-input">
+            Type a short sentence
+            <textarea
+              id="sentence-input"
+              rows="5"
+              maxlength="180"
+              placeholder="Example: I want to drink"
+            >I want to drink</textarea>
+          </label>
+
+          <div class="button-row">
+            <button class="primary-button" type="submit">Predict Next Word</button>
+            <button class="secondary-button" type="button" id="sample-button">
+              Try Sample
+            </button>
+          </div>
+        </form>
+
+        <section class="result-panel" aria-live="polite" aria-labelledby="result-heading">
+          <div class="result-header">
+            <p class="eyebrow" id="result-heading">Prediction result</p>
+            <span class="confidence-badge" id="confidence-badge">45%</span>
+          </div>
+
+          <p class="prediction-line">
+            Next word:
+            <strong id="top-prediction">tea</strong>
+          </p>
+
+          <div class="explanation-grid">
+            <article>
+              <span>Detected intent</span>
+              <strong id="intent-text">drink</strong>
+            </article>
+            <article>
+              <span>Why</span>
+              <strong id="why-text">The input contains the token "drink".</strong>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="technical-view" aria-label="Technical breakdown">
+        <article class="technical-block">
+          <p class="eyebrow">Step 1</p>
+          <h2>Tokens</h2>
+          <div class="token-list" id="token-list"></div>
+        </article>
+
+        <article class="technical-block">
+          <p class="eyebrow">Step 2</p>
+          <h2>Scores</h2>
+          <div class="score-list" id="score-list"></div>
+        </article>
+
+        <article class="technical-block">
+          <p class="eyebrow">Step 3</p>
+          <h2>Probabilities</h2>
+          <div class="probability-list" id="probability-list"></div>
+        </article>
+      </section>
+
+      <section class="lesson-band" aria-labelledby="lesson-title">
+        <p class="eyebrow">Beginner AI lesson</p>
+        <h2 id="lesson-title">This is rule-based prediction, not machine learning.</h2>
+        <p>
+          The app does not learn from data yet. It uses human-written rules to
+          demonstrate the same shape many AI systems follow: receive input,
+          represent it, score possible outputs, and choose the strongest answer.
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
